@@ -15,7 +15,7 @@ int main(void)
 		if (n < 10)
 			putchar('0' + n);
 		else
-			putchar('A' + n - 10);
+			putchar('a' + n - 10);
 
 		n++;
 	}
