@@ -14,25 +14,15 @@ char *cap_string(char *s)
 
 	while (s[len])
 	{
-		switch (s[len])
+		if (s[len] == ' ' || s[len] == '\t' || s[len] == '\n' ||
+				s[len] == ',' || s[len] == ';' || s[len] == '.' ||
+				s[len] == '!' || s[len] == '?' || s[len] == '"' ||
+				s[len] == '(' || s[len] == ')' || s[len] == '{' || s[len] == '}')
 		{
-			case ' ':
-			case '\t':
-			case '\n':
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
 			cap = 1;
-			break;
-			default:
-
+		}
+		else
+		{
 			if (cap)
 			{
 				if (s[len] >= 'a' && s[len] <= 'z')
