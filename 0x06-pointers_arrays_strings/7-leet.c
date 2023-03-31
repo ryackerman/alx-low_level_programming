@@ -13,14 +13,14 @@ char *leet(char *s)
 	char upper[] = {'A', 'E', 'O', 'T', 'L'};
 	char replacements[] = {'4', '3', '0', '7', '1'};
 
-	while (*s)
+	while (s[len])
 	{
 		for (i = 0; i <= 4; i++)
 		{
-			if (*s == lower[i] || *s == upper[i])
-				*s = replacements[i];
+			if (s[len] == lower[i] || s[len] == upper[i])
+				s[len] = replacements[i];
 		}
-		s++;
+		len++;
 	}
 	return (s);
 }
