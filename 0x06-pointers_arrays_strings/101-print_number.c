@@ -5,16 +5,19 @@
  * @n: int to print
  */
 
-int print_number(int n)
+void print_number(int n)
 {
+	int nb;
+
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
-	if (n / 10 != 0)
+	nb = n;
+	if (nb / 10 != 0)
 	{
-		print_number(n / 10);
+		print_number(nb / 10);
 	}
-	_putchar((n % 10) + '0');
+	_putchar((nb % 10) + '0');
 }
