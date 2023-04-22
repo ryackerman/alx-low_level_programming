@@ -13,7 +13,6 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0, j, c = 0;
 
 	va_start(list, format);
-
 	while (format && format[i])
 	{
 		j = 0;
@@ -23,8 +22,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}
-			j++;
+			} j++;
 		}
 		switch (format[i])
 		{
@@ -46,9 +44,7 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", str);
 				break;
-		}
-		i++;
+		} i++;
 	}
-	printf("\n");
-	va_end(list);
+	printf("\n"), va_end(list);
 }
