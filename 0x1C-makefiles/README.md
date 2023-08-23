@@ -2,7 +2,7 @@
 # 0x1C. C - Makefiles
 
 
-
+![alt text](https://i.ibb.co/Q8BQPY9/giphy-2.gif)
 ## Resources
 
 **Read or watch:**
